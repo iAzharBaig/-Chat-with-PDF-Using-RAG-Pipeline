@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Knowledge Base Search</h1>
+        </header>
+        
+        <section class="ingest-section">
+            <h2>Data Ingestion</h2>
+            <div class="input-group">
+                <textarea id="urls" placeholder="Enter URLs (one per line)"></textarea>
+                <button onclick="ingestData()">Ingest Data</button>
+            </div>
+        </section>
+
+        <section class="query-section">
+            <h2>Search Knowledge Base</h2>
+            <div class="input-group">
+                <input type="text" id="query" placeholder="Enter your question">
+                <button onclick="searchQuery()">Search</button>
+            </div>
+            <div id="response" class="response-box"></div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
